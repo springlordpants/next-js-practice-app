@@ -1,17 +1,15 @@
 import React from 'react'
 
+const List = ({ items, ...props }) => {
+  const [filteredItems, setFilteredItems] = React.useState(items)
 
-const List = ({items, ...props}) => {
-  const [filteredItems, setFilteredItems] = React.useState(items);
+  const filterItems = (e) => {
+    const searchValue = e.target.value
+    const currentItems = [...items]
+    const matchingItems = currentItems.filter((item) => item.startsWith(searchValue))
 
-
-const filterItems = (e) => {
-  const searchValue = e.target.value;
-  const currentItems = [...items];
-  const matchingItems = currentItems.filter((item) => item.startsWith(searchValue));
-  
-  setFilteredItems(matchingItems);
-  };
+    setFilteredItems(matchingItems)
+  }
 
   return (
     <>
@@ -22,11 +20,9 @@ const filterItems = (e) => {
         ))}
       </ul>
     </>
-  );
-
-};
+  )
+}
 const ListContainer = () =>
-  <List aria-label="My Fancy List" items = {['Learn React', 'Learn Next.js', '???', 'Profit']} />
+  <List aria-label='My Fancy List' items={['Learn React', 'Learn Next.js', '???', 'Profit']} />
 
-
-export default ListContainer;
+export default ListContainer
