@@ -1,6 +1,6 @@
 export default function Home() {
   return <div>
-      <h1>Hello!</h1>
+      <h1>Hello Next.js!</h1>
     </div>
 
 }
