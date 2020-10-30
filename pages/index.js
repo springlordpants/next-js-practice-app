@@ -1,5 +1,16 @@
-export default function Home() {
-  return <div>
-      <h1>Welcome to my Next.js Practice app!</h1>
-    </div>
+import React from 'react'
+
+class List extends React.Component {
+  render () {
+    return (
+      <ul>
+        <li>Learn React</li>
+        <li>Learn Next js</li>
+        <li>???</li>
+        <li>Profit</li>
+      </ul>
+    )
+  }
 }
+
+export default List;
