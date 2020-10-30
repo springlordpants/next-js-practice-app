@@ -1,5 +1,5 @@
 export default function Home() {
   return <div>
-      <h1>Hello Next.js!</h1>
+      <h1>Welcome to my Next js. Practice app!</h1>
     </div>
 }
